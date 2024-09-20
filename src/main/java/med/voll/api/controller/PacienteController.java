@@ -18,7 +18,6 @@ public class PacienteController {
 
     @Autowired
     private PacienteRepository repository;
-
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroPaciente dados, UriComponentsBuilder uriComponentsBuilder) {
