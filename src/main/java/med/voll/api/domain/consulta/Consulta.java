@@ -32,4 +32,12 @@ public class Consulta {
 
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime data;
+
+    @Column(name = "motivo_cancelamento")
+    @Enumerated(EnumType.STRING)
+    private MotivoCancelamento motivoCancelamento;
+
+    public void cancelar(MotivoCancelamento motivo) {
+        this.motivoCancelamento = motivo;
+    }
 }
